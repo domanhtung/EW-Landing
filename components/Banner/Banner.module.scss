@@ -1,0 +1,72 @@
+.banner {
+    width: 100%;
+    height: calc(100vh - 200px);
+    margin-bottom: 200px;
+    .bannerBox {
+        max-width: 810px;
+        padding: 300px 0 10px;
+        text-align: center;
+        overflow: hidden;
+        h1 {
+            padding: 0 20px;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 76px;
+            letter-spacing: 0.105em;
+            text-transform: capitalize;
+            font-family: "Vermin Vibes V";
+            user-select: none;
+            text-shadow: 0 0 6px #FFFFFF;
+        }
+        h6 {
+            font-size: 24px;
+            line-height: 68px;
+            margin-top: 30px;
+            margin-bottom: 23px;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .banner {
+        height: 100vh;
+        margin-bottom: 100px;
+        .bannerBox {
+            padding-top: 200px;
+            h1 {
+                max-width: 600px;
+                margin: auto;
+                line-height: 60px;
+                letter-spacing: -0.005em;
+            }
+            h6 {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .banner {
+        height: 100vh;
+        margin-bottom: 0;
+        .bannerBox {
+            padding: 14vh 0 0;
+            h1 {
+                width: 100%;
+                max-width: 380px;
+                margin: auto;
+                font-size: 24px;
+                line-height: 45px;
+            }
+            h6 {
+                padding: 0 20px;
+                font-size: 13px;
+                line-height: 28px;
+            }
+            button {
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+    }
+}

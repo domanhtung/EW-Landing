@@ -1,0 +1,20 @@
+.checkBox {
+    position: relative;
+    border: 1px solid #F2F2F2;
+    border-radius: 2px;
+    cursor: pointer;
+    &[data-role="checked"] {
+        border: 1px solid rgba(122, 241, 252, 1);
+        &::before {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #66F5FE;
+            border-radius: 2px;
+        }
+    }
+}

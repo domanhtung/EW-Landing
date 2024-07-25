@@ -1,0 +1,215 @@
+.roadMap {
+    height: 700px;
+    .roadMapBox {
+        .roadMapContent {
+            .roadMapSelect {
+                position: relative;
+                display: flex;
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto 30px;
+                font-size: 20px;
+                line-height: 32px;
+                z-index: 20;
+                div[data-role="button-light-blue"]:first-child {
+                    width: 60%;
+                    margin-right: 20px;
+                }
+                div[data-role="button-light-blue"]:last-child {
+                    width: 40%;
+                }
+            }
+            .roadMapSlide {
+                position: relative;
+                margin: 0 auto 0;
+                width: 400px;
+                height: 340px;
+                .prevArrow, .nextArrow {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    z-index: 2;
+                    cursor: pointer;
+                }
+                .prevArrow {
+                    left: -60px;
+                }
+                .nextArrow {
+                    right: -60px;
+                }
+            }
+            .roadMapZone {
+                position: absolute;
+                display: flex;
+                width: auto;
+                height: 100%;
+                align-items: center;
+                gap: 20px;
+                pointer-events: none;
+                .roadMapSlide {
+                    .card, .child {
+                        height: 100%;
+                        padding: 3px;
+                    }
+                    .roadMapItem {
+                        height: 100%;
+                        background: linear-gradient(87.2deg, rgba(255, 255, 255, 0.59) -17.42%, rgba(255, 255, 255, 0.27) 105.3%);
+                        border-radius: 2px;
+                        backdrop-filter: blur(4px);
+                    }
+                    .roadMapItemIn {
+                        display: grid;
+                        height: 100%;
+                        padding-left: 30px;
+                        .roadMapItemTextIn {
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            .road-map-slide-content {
+                                height: fit-content;
+                            }
+                        }
+                    }
+                    .roadMapItemTextFirst, .roadMapLine {
+                        height: 100%;
+                        border-left: 1px dashed #F2F2F2;
+                    }
+                    .roadMapItemTextFirst {
+                        display: flex;
+                        padding-left: 8px;
+                        align-items: center;
+                    }
+                    .roadMapSlideContent {
+                        position: relative;
+                        max-height: 25px;
+                        padding-left: 30px;
+                        font-size: 24px;
+                        line-height: 25px;
+                        transition: 0.5s linear;
+                    }
+                    .roadMapDot {
+                        position: absolute;
+                        width: 25px;
+                        height: 25px;
+                        top: 50%;
+                        left: -12px;
+                        transform: translate(0, -50%);
+                        border: 1px solid #F2F2F2;
+                        border-radius: 50%;
+                    }
+                    .roadMapDone {
+                        background: url('../../public/assets/images/Home/Body/green-tick.png') no-repeat;
+                        background-size: 100%;
+                    }
+                }
+                .slideNear {
+                    width: 250px;
+                    height: 253px;
+                    opacity: 0.5;
+                    .roadMapItem {
+                        background: linear-gradient(114.16deg, rgba(255, 255, 255, 0.41) 2.48%, rgba(255, 255, 255, 0.29) 100%);
+                    }
+                    .roadMapItemTextFirst {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                    .roadMapSlideContent {
+                        max-height: 18px;
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                    .roadMapDot {
+                        width: 18px;
+                        height: 18px;
+                        left: -9px;
+                    }
+                    .roadMapItemIn {
+                        padding-left: 14px;
+                    }
+                    .roadMapSlideContent {
+                        padding-left: 14px;
+                    }
+                    .roadMapDone {
+                        background: url('../../public/assets/images/Home/Body/gray_tick.png');
+                        background-size: 100%;
+                    }
+                }
+            }
+            .roadMapZone, .roadMapSlide, .roadMapSlideContent {
+                transition: 0.5s linear;
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .roadMap {
+        height: 500px;
+        .roadMapBox {
+            padding: 0 10px;
+            .roadMapContent {
+                position: relative;
+                width: 300px;
+                margin: 19px auto 0;
+                .roadMapSelect {
+                    max-width: 100%;
+                    font-size: 12px;
+                    line-height: 25px;
+                    .curren-option {
+                        padding: 8px 40px 8px 10px;
+                    }
+                }
+                .roadMapSlide {
+                    width: 300px;
+                    height: 260px;
+                    overflow: hidden;
+                    div[data-role="card-active-Active"] {
+                        margin: 0 20px;
+                    }
+                    .roadMapZone {
+                        height: 260px;
+                        .roadMapItemTextFirst {
+                            font-size: 16px;
+                            line-height: 18px;
+                        }
+                        .roadMapSlideContent {
+                            max-height: 18px;
+                            font-size: 18px;
+                            line-height: 18px;
+                        }
+                        .roadMapDot {
+                            width: 18px;
+                            height: 18px;
+                            left: -9px;
+                        }
+                        .roadMapItemTextIn {
+                            padding-right: 10px;
+                        }
+                        .roadMapSlide {
+                            .roadMapItemIn {
+                                padding-left: 20px;
+                                .roadMapItemTextIn {
+                                    .roadMapSlideContent {
+                                        padding-left: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .slideCenter {
+                        height: 260px;
+                    }
+                }
+                .prevArrow, .nextArrow {
+                    position: absolute;
+                    bottom: 110px;
+                }
+                .prevArrow {
+                    left: -28px;
+                }
+                .nextArrow {
+                    right: -28px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,169 @@
+.news {
+    height: 700px;
+    .newsBox {
+        width: 100%;
+        max-width: 1000px;
+        .newsTitle {
+            margin-bottom: 35px;
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 73px;
+            text-align: left;
+            font-family: "Vermin Vibes V";
+        }
+        .newsContent {
+            display: flex;
+            div[data-role="card-active-Active"] {
+                width: calc(100% / 3);
+                height: 100%;
+                .newsContentBox {
+                    width: 100%;
+                    height: 100%;
+                    padding: 6px;
+                    background: linear-gradient(215.18deg, rgba(255, 255, 255, 0.23) 2.97%, rgba(255, 255, 255, 0.12) 108.26%);
+                    backdrop-filter: blur(4px);
+                    img {
+                        width: 100%;
+                        height: 197px;
+                    }
+                    .newContentText {
+                        height: 140px;
+                        text-align: left;
+                        font-style: normal;
+                    }
+                    h5 {
+                        margin: 20px 0;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 20px;
+                        -webkit-line-clamp: 3;
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                    h6 {
+                        -webkit-line-clamp: 3;
+                        font-size: 12px;
+                        line-height: 20px;
+                    }
+                    div {
+                        margin-top: 10px;
+                        font-size: 12px;
+                        line-height: 20px;
+                        text-align: right;
+                    }
+                }
+                &:nth-child(2) {
+                    margin: 0 20px;
+                }
+            }
+        }
+        .bottomContent {
+            display: flex;
+            margin-top: 10px;
+            align-items: center;
+        }
+        .blogDate {
+            margin-left: auto;
+            font-family: 'Aldrich';
+            color: rgba(69, 193, 210, 1);
+            font-style: italic;
+            font-weight: 700;
+        }
+        .viewer {
+            display: flex;
+            font-size: 14px;
+            align-items: center;
+            font-family: "Aldrich";
+            color: #FFFFFF;
+            span {
+                margin-left: 5px;
+            }
+            i {
+                margin-left: 10px;
+                &:first-child {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .news {
+        height: 550px;
+        .newsBox {
+            max-width: 660px;
+            .news-title {
+                margin-bottom: 20px;
+                font-size: 30px;
+                line-height: 53px;
+            }
+            .newsContent {
+                div[data-role="card-active-Active"] {
+                    &:nth-child(2) {
+                        margin: 0 10px;
+                    }
+                    .newsContentBox {
+                        .newContentText {
+                            height: 140px;
+                        }
+                        img {
+                            width: 100%;
+                            height: 109px;
+                        }
+                        h5 {
+                            margin: 10px 0;
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .news {
+        height: 600px;
+        .newsBox {
+            max-width: 100%;
+            padding: 0 10px;
+            .newsTitle {
+                width: 260px;
+                margin: 0 auto 7px;
+                text-align: left;
+                font-size: 20px;
+            }
+            .newsContent {
+                display: block;
+                width: 320px;
+                margin: auto;
+                div[data-role="card-active-Active"] {
+                    width: 100%;
+                    max-width: 260px;
+                    margin: 0 auto;
+                    &:nth-child(2) {
+                        margin: 10px auto;
+                    }
+                    .newsContentBox {
+                        img {
+                            height: 140px;
+                            max-height: 307px;
+                        }
+                        h5 {
+                            margin: 10px 0;
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                        h6 {
+                            font-size: 12px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.newsHeightAuto {
+    height: auto;
+}

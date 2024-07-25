@@ -1,0 +1,17 @@
+.middleBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    .middleBackgroundRelative {
+        position: relative;
+        height: 100%;
+        .backgroundCharacter {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            z-index: 2;
+            left: 0;
+        }
+    }
+}

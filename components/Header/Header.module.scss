@@ -1,0 +1,211 @@
+.mobileHeader {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    padding: 0 25px;
+    z-index: 200;
+    align-items: center;
+    background: linear-gradient(180deg, #000000 0%, #4E4949 0.01%, rgba(83, 81, 81, 0.06) 47.92%, rgba(73, 73, 73, 0.09) 100%);
+    text-transform: uppercase;
+  
+    .logoHeader {
+      position: absolute;
+      height: 39px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      cursor: pointer;
+    }
+
+    svg {
+      width: 30px;
+      height: 20px;
+    }
+  
+    nav {
+      position: fixed;
+      width: calc(100% - 60px);
+      height: 100vh;
+      top: 0;
+      padding: 20px 0;
+      background: #191919;
+      z-index: 100;
+  
+      .navItem {
+        display: flex;
+        padding: 8px 20px 0 20px;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--color-white);
+        cursor: pointer;
+        div {
+          padding-bottom: 7px;
+        }
+  
+        &[data-role="active"] div {
+          padding-bottom: 5px;
+          border-bottom: 2px solid #56CCF2;
+          font-weight: 700;
+        }
+      }
+  
+      .navItemRight {
+        position: relative;
+        width: 100%;
+        span[data-role="button"] {
+          position: absolute;
+          display: flex;
+          width: 40px;
+          height: 40px;
+          top: -5px;
+          right: 15px;
+          justify-content: center;
+        }
+      }
+    }
+  
+    .navShow {
+      left: 0;
+      &transaction {
+        animation: navOpen 0.5s linear;
+      }
+    }
+  
+    .navHidden {
+      left: -100vw;
+      &transaction {
+        animation: navClose 0.5s linear;
+      }
+    }
+  
+    @keyframes navOpen {
+      from {left: -100vw;}
+      to {left: 0;}
+    }
+  
+    @keyframes navClose {
+      from {left: 0;}
+      to {left: -100vw;}
+    }
+}
+  
+.header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding: 14px 75px;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+  background: #010b1a;
+  .logo {
+    height: 39px;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+  .navbarLink {
+    position: relative;
+    margin-left: 25px;
+    padding: 8px;
+    border-radius: 5px;
+    backdrop-filter: blur(4px);
+    text-transform: uppercase;
+    font-weight: bold;
+    .navbarBg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 0;
+      filter: brightness(50%);
+      border-radius: 5px;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+      }
+    }
+    cursor: pointer;
+    &[data-role="active"], &:hover {
+      .headerUnderLine {
+        width: calc(100% - 26px);
+      }
+      .navbarBg {
+        filter: brightness(100%);
+      }
+    }
+  }
+  .title {
+    position: relative;
+    z-index: 1;
+  }
+  .headerUnderLine {
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 13px;
+    background: #56CCF2;
+    transition: 0.2s linear;
+  }
+  .navbarLinkDisable {
+    cursor: auto;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.5);
+    .headerUnderLine {
+      width: 0;
+    }
+    &:hover {
+      color: rgba(255, 255, 255, 0.5);
+      font-weight: 400;
+      .headerUnderLine {
+        width: 0;
+      }
+      .navbarBg {
+        filter: brightness(50%);
+      }
+    }
+  }
+  #navbarLink0 {
+    margin-left: auto;
+  }
+  .newEventItemBar {
+    position: absolute;
+    width: 94px;
+    min-width: 94px;
+    top: 32px;
+    left: -4px;
+    padding: 10px 14px;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.59);
+    background: #010b1a;
+    background-size: 100% 100%;
+    border: 1px solid rgba(102, 245, 254, 0.6);
+    border-radius: 5px;
+    cursor: pointer;
+    div {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      cursor: pointer;
+      &:last-child {
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+      &[data-role="active"] {
+        color: #66F5FE !important;
+      }
+      &:hover {
+        color: #FFFFFF;
+      }
+    }
+  }
+}

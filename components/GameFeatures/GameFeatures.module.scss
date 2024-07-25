@@ -1,0 +1,168 @@
+.gameFeatures {
+    height: 1100px;
+    .gameFeaturesBox {
+        padding-bottom: 200px;
+        h1 {
+            font-size: 30px;
+        }
+        .gameFeaturesContent {
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            .gameFeaturesContentTop, .gameFeaturesContentBottom {
+                display: flex;
+                section {
+                    width: 308px;
+                    height: 269px;
+                    margin-right: 18px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+            .gameFeaturesContentTop {
+                margin-bottom: 30px;
+            }
+            .gameFeatureContentBox {
+                height: 100%;
+                margin-right: 30px;
+                backdrop-filter: blur(4px);
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            .contentBoxThree {
+                display: block;
+            }
+            .contentBoxBottom {
+                display: none;
+            }
+            .gameFeaturesItem {
+                width: 255px;
+                text-align: center;
+                div {
+                    text-align: left;
+                }
+                .gameTitle {
+                    margin: 20px 0;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 32px;
+                }
+                .gameContent {
+                    font-size: 18px;
+                    line-height: 25px;
+                    font-family: 'Aldrich';
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .gameFeatures {
+        height: 750px;
+        .gameFeaturesBox {
+            padding-bottom: 0;
+            .gameFeaturesContent {
+                max-width: 660px;
+                .cardInactiveAnimate {
+                    padding: 6px;
+                }
+                .gameFeaturesContentTop {
+                    margin-bottom: 10px;
+                }
+                .gameFeatureContentBox {
+                    margin-right: 10px;
+                }
+                .gameFeaturesContentTop, .gameFeaturesContentBottom {
+                    section {
+                        width: 214px;
+                        height: 198px;
+                        margin-right: 10px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                .gameFeaturesItem {
+                    width: 170px;
+                    img {
+                        width: 70px;
+                    }
+                    .gameTitle {
+                        margin: 10px 0;
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                    .gameContent {
+                        font-size: 14px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .gameFeatures {
+        height: 800px;
+        .gameFeaturesBox {
+            .homeTitle {
+                padding: 0 10px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            .gameFeaturesContent {
+                width: fit-content;
+                padding: 0 10px;
+                .gameFeatureContentBox {
+                    height: 192px;
+                    padding: 19px 0 14px;
+                }
+                .contentBoxThree {
+                    display: none;
+                }
+                .gameFeaturesContentTop, .gameFeaturesContentBottom {
+                    section {
+                        width: calc(50vw - 20px);
+                        height: fit-content;
+                        margin-right: 10px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                .contentBoxBottom {
+                    display: block;
+                    width: fit-content;
+                    margin-top: 10px;
+                }
+                .gameFeaturesItem {
+                    width: 150px;
+                    margin: auto;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+                    .gameTitle {
+                        width: 90px;
+                        margin: 9px auto 6px;
+                        font-size: 13px;
+                        line-height: 20px;
+                        text-align: center;
+                    }
+                    .gameContent {
+                        // width: 140px;
+                        font-size: 12px;
+                        line-height: 15px;
+                        text-align: center;
+                    }
+                }
+                .gameFeaturesContentBottom .gameFeatureContentBox:nth-child(2) {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,247 @@
+.comic {
+    position: relative;
+    padding: 151px 20px 0;
+    color: #FFFFFF;
+    z-index: 3;
+    .title {
+        margin-bottom: 70px;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 76px;
+        letter-spacing: 0.105em;
+        text-transform: capitalize;
+        text-align: center;
+        font-family: "Vermin Vibes V";
+        text-shadow: 0 0 8px #FFFFFF;
+    }
+    .content {
+        position: relative;
+        max-width: 1140px;
+        margin: auto;
+        padding: 0 20px;
+        .next, .prev {
+            position: absolute;
+            top: calc(50% - 30px);
+            transform: translate(0, -50%);
+            cursor: pointer;
+            z-index: 1;
+        }
+        .next {
+            right: 0;
+        }
+        .prev {
+            left: 0;
+        }
+        .slickList {
+            padding: 2px 0;
+            overflow: hidden;
+        }
+        div[data-role="card-active-Active"] {
+            width: fit-content;
+            margin: auto;
+        }
+        .comicBook {
+            width: 190px;
+            height: 281px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                transition: 0.5s linear;
+            }
+            &:hover {
+                img {
+                    width: calc(100% + 30px);
+                    height: calc(100% + 30px);
+                    margin-top: -15px;
+                    margin-left: -15px;
+                }
+            }
+            &Disable {
+                pointer-events: none;
+            }
+        }
+        .comicCard {
+            div[data-role="card-active-Disable"] {
+                width: fit-content;
+                margin: auto;
+            }
+            .comicTitle {
+                padding-top: 28px;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 32px;
+            }
+            .comicChapter {
+                font-size: 20px;
+                line-height: 30px;
+                font-family: 'Aldrich';
+            }
+            .comicChapter, .comicTitle {
+                max-width: 190px;
+                text-align: left;
+                margin: auto;
+            }
+        }
+    }
+}
+.comicDetail {
+    .buttonBackBox {
+        max-width: 1140px;
+        padding: 20px;
+        margin: auto;
+    }
+    .titleDetail {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 66px;
+        letter-spacing: 0.005em;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: "Aldrich";
+        text-shadow: 0 0 8px #FFFFFF;
+    }
+    .buttonBack {
+        display: flex;
+        width: fit-content;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        svg {
+            height: 21.6px;
+        }
+        svg {
+            margin-right: 17px;
+        }
+    }
+    .flipBookDetail {
+        position: relative;
+        margin-top: 20px;
+        width: 100%;
+        padding: 0 20px;
+        margin-left: auto;
+        margin-right: auto;
+        .flipBookDemo {
+            cursor: pointer;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+      .flipBookDetail {
+        max-width: 720px;
+      }
+    }
+    
+    @media (min-width: 992px) {
+      .flipBookDetail {
+        max-width: 960px;
+      }
+    }
+    
+    @media (min-width: 1200px) {
+      .flipBookDetail {
+        max-width: 1140px;
+      }
+    }
+    @media (max-width: 700px) {
+        .flipBookDetail {
+            padding: 0;
+        }
+    }
+    .buttonPrev, .buttonNext {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        cursor: pointer;
+    }
+    .buttonNext {
+        right: -30px;
+    }
+    .buttonPrev {
+        left: -30px;
+    }
+    .popular {
+        max-width: 1140px;
+        padding: 30px 20px 20px;
+        margin: auto;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 73px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #F2F2F2;
+        text-align: left;
+    }
+}
+@media (max-width: 1024px) {
+    .comic {
+        padding-top: 80px;
+        .title {
+            font-size: 45px;
+            line-height: 66px;
+        }
+        .content {
+            .comicCard {
+                .comicTitle {
+                    padding-top: 28px;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+                .comicChapter {
+                    font-size: 18px;
+                    line-height: 26px;
+                    font-family: 'Aldrich';
+                }
+            }
+        }
+        .popular {
+            font-size: 26px;
+            line-height: 53px;
+            margin-bottom: 10px;
+        }
+    }
+    .comicDetail {
+        .titleDetail {
+            font-size: 30px;
+            line-height: 50px;
+        }
+    }
+}
+@media (max-width: 700px) {
+    .comic {
+        padding-top: 80px;
+        .title {
+            margin-bottom: 20px;
+            font-size: 28px;
+            line-height: 36px;
+        }
+        .buttonBackBox {
+            padding: 10px;
+        }
+        .content {
+            max-width: 300px;
+        }
+        .popular {
+            font-size: 26px;
+            line-height: 53px;
+        }
+        .content {
+            .comicCard {
+                .comicTitle {
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+    .comicDetail {
+        .titleDetail {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+}

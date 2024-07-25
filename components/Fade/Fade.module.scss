@@ -1,0 +1,21 @@
+.fadeSection {
+    width: 100%;
+    opacity: 0;
+    transform: translate(0, 40%);
+    visibility: hidden;
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+    will-change: opacity, visibility;
+}
+.middleFadeSection {
+    width: 100%;
+    opacity: 0;
+    transform: translate(40%, 0);
+    visibility: hidden;
+    transition: opacity 400ms ease-out, transform 400ms ease-out;
+    will-change: opacity, visibility;
+}
+.isVisible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}

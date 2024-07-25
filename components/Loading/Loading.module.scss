@@ -1,0 +1,78 @@
+.centerLoading {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    z-index: 2000;
+}
+.wave {
+    width: 5px;
+    height: 50px;
+    background: linear-gradient(270deg, #7AC9E2 9.53%, #56CCF2 68.47%);
+    margin: 3px;
+    animation: wave 1s linear infinite;
+    border-radius: 20px;
+}
+@media (max-width: 600px) {
+    .wave {
+        height: 25px;
+    }
+}
+.wave:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.wave:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.wave:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.wave:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.wave:nth-child(6) {
+    animation-delay: 0.5s;
+}
+.wave:nth-child(7) {
+    animation-delay: 0.6s;
+}
+.wave:nth-child(8) {
+    animation-delay: 0.7s;
+}
+.wave:nth-child(9) {
+    animation-delay: 0.8s;
+}
+.wave:nth-child(10) {
+    animation-delay: 0.9s;
+}
+
+@keyframes wave {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+.itemLoading {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-top: 4px solid;
+    border-color: rgb(34, 176, 223) transparent;
+    animation: spin .6s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg) }
+
+    100% { transform: rotate(359deg) }
+}

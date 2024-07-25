@@ -1,0 +1,203 @@
+.storyLine {
+    height: 1000px;
+    .storyLineBox {
+        position: relative;
+        max-width: 850px;
+        padding-top: 200px;
+        text-align: center;
+        .storyLineMonster {
+            position: absolute;
+            width: 500px;
+            top: 120px;
+            left: -220px;
+            transform: rotate3d(0, 1, 0, 180deg);
+        }
+        h1 {
+            padding: 0 200px 8px;
+        }
+        h5 {
+            padding: 0;
+            margin-bottom: 30px;
+            font-size: 24px;
+            line-height: 60px;
+            letter-spacing: -0.005em;
+            font-family: 'Aldrich';
+        }
+        h6 {
+            font-size: 18px;
+            line-height: 44px;
+        }
+        h5, h6 {
+            text-transform: capitalize;
+        }
+        .storyLineSlider {
+            position: relative;
+            .prevArrow, .nextArrow {
+                position: absolute;
+                width: 46px;
+                height: 46px;
+                top: 50%;
+                transform: translate(0, -50%);
+                z-index: 2;
+                cursor: pointer;
+            }
+            .prevArrow {
+                left: -30px;
+            }
+            .nextArrow {
+                right: -30px;
+            }
+        }
+        .storyLineCommic {
+            position: relative;
+            padding: 0 20px;
+            .slickList {
+                padding: 2px 0;
+                overflow: hidden;
+            }
+            .storyComicBook {
+                width: 180px;
+                height: 254px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    transition: 0.5s linear;
+                }
+                &:hover {
+                    img {
+                        width: calc(100% + 30px);
+                        height: calc(100% + 30px);
+                        margin-top: -15px;
+                        margin-left: -15px;
+                    }
+                }
+                &Disable {
+                    pointer-events: none;
+                }
+            }
+            .storyLineComicCard {
+                padding: 0 42px;
+                .comicTitle {
+                    padding-top: 10px;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                .comicChapter {
+                    font-size: 12px;
+                    line-height: 20px;
+                    font-family: 'Aldrich';
+                }
+                .comicChapter, .comicTitle {
+                    text-align: left;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .storyLine {
+        height: 1000px;
+        .storyLineBox {
+            width: 100%;
+            max-width: 660px;
+            padding-top: 280px;
+            .storyLineMonster {
+                width: 480px;
+                top: 0px;
+                left: 0;
+            }
+            h1 {
+                padding: 0;
+            }
+            h5 {
+                padding: 0 50px;
+                margin-bottom: 20px;
+                font-size: 18px;
+                line-height: 30px;
+            }
+            h6 {
+                font-size: 14px;
+                line-height: 28px;
+            }
+            .storyLineSlider {
+                .prevArrow {
+                    left: -30px;
+                }
+                .nextArrow {
+                    right: -30px;
+                }
+            }
+            .storyLineCommic {
+                .storyLineComicCard {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .storyLine {
+        height: 700px;
+        .storyLineBox {
+            max-width: 100%;
+            padding: 0 20px;
+            .storyLineMonster {
+                display: none;
+            }
+            h1 {
+                line-height: 73px;
+            }
+            h5 {
+                margin: 11px auto 36px;
+                padding: 0;
+                font-size: 14px;
+                line-height: 26px;
+                letter-spacing: -0.005em;
+            }
+            h6 {
+                margin-bottom: 22px;
+                font-size: 16px;
+                line-height: 44px;
+                font-weight: 700;
+            }
+            .storyLineSlider {
+                position: relative;
+                width: 210px;
+                margin: auto;
+            }
+            .storyLineCommic {
+                .prevArrow, .nextArrow {
+                    top: calc(50% - 23px);
+                }
+                .prevArrow {
+                    left: -40px;
+                }
+                .nextArrow {
+                    right: -40px;
+                }
+            }
+            .storyLineCommic {
+                .storyLineComicCard {
+                    .comicTitle {
+                        margin-top: 0;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 28px;
+                    }
+                    .comicChapter {
+                        font-size: 14px;
+                        line-height: 20px;
+                        font-family: 'Aldrich';
+                    }
+                    .comicChapter, .comicTitle {
+                        max-width: none;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+}

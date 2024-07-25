@@ -1,0 +1,228 @@
+.card {
+    position: relative;
+    padding: 3px;
+    .border:nth-child(1)::before, .border:nth-child(1)::after, .border:nth-child(2)::before, .border:nth-child(2)::after {
+        content: '';
+        position: absolute;
+        width: 14px;
+        height: 2px;
+        border-radius: 1px;
+    }
+    .border:nth-child(1)::before, .border:nth-child(3)::before {
+        top: -2px;
+        left: -2px;
+    }
+    .border:nth-child(1)::after, .border:nth-child(3)::after {
+        top: -2px;
+        right: -2px;
+    }
+    .border:nth-child(2)::before, .border:nth-child(4)::before {
+        bottom: -2px;
+        left: -2px;
+    }
+    .border:nth-child(2)::after, .border:nth-child(4)::after {
+        bottom: -2px;
+        right: -2px;
+    }
+    .border:nth-child(3)::before, .border:nth-child(3)::after, .border:nth-child(4)::before, .border:nth-child(4)::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 22px;
+        border-radius: 1px;
+    }
+}
+.cardActive {
+    cursor: pointer;
+    border: 1px solid rgba(86, 204, 242, 1);
+    height: 100%;
+    .child {
+        height: 100%;
+    }
+    .border:nth-child(1)::before, .border:nth-child(1)::after, .border:nth-child(2)::before, .border:nth-child(2)::after,
+    .border:nth-child(3)::before, .border:nth-child(3)::after, .border:nth-child(4)::before, .border:nth-child(4)::after {
+        background: linear-gradient(rgba(102, 245, 254, 1), rgba(102, 245, 254, 1));
+    }
+    .border::before, .border::after {
+        transition: 0.5s linear;
+    }
+    &:hover {
+        .border:nth-child(1)::before, .border:nth-child(1)::after, .border:nth-child(2)::before, .border:nth-child(2)::after {
+            width: calc(50% + 3px);
+        }
+        .border:nth-child(3)::before, .border:nth-child(3)::after, .border:nth-child(4)::before, .border:nth-child(4)::after {
+            height: calc(50% + 3px);
+        }
+    }
+    .child {
+        box-shadow: 0px 4px 14px rgba(122, 255, 239, 0.46);
+    }
+}
+.cardDisable {
+    .border {
+        display: none;
+    }
+    .child {
+        box-shadow: 0px 4px 14px rgba(196, 196, 196, 0.4);
+    }
+}
+.cardInactive {
+    border: 1px solid #F2F2F2;
+    height: 100%;
+    .child {
+        height: 100%;
+    }
+    .border:nth-child(1)::before, .border:nth-child(1)::after, .border:nth-child(2)::before, .border:nth-child(2)::after,
+    .border:nth-child(3)::before, .border:nth-child(3)::after, .border:nth-child(4)::before, .border:nth-child(4)::after {
+        background: #F2F2F2;
+    }
+    .border::before, .border::after {
+        transition: 0.5s linear;
+    }
+}
+.cardInactiveAnimate {
+    position: relative;
+    padding: 20px;
+    border-radius: 2px;
+    .border:nth-child(1)::before, .border:nth-child(1)::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        z-index: 2;
+    }
+    .border:nth-child(2)::before, .border:nth-child(2)::after {
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: 100%;
+        z-index: 2;
+    }
+    .border:nth-child(1)::before {
+        top: -1px;
+        left: -1px;
+    }
+    .border:nth-child(1)::after {
+        bottom: -1px;
+        right: -1px;
+    }
+    .border:nth-child(2)::before {
+        top: -1px;
+        right: -1px;
+    }
+    .border:nth-child(2)::after {
+        bottom: -1px;
+        left: -1px;
+    }
+}
+.cardInactiveBlue {
+    border: 2px solid rgba(102, 245, 254, 0.14);
+    background: linear-gradient(122.76deg, rgba(255, 255, 255, 0.06) -2.23%, rgba(255, 255, 255, 0.18) 100%);
+    overflow: hidden;
+    .border:nth-child(1)::before {
+        background: linear-gradient(to right, transparent, rgba(116, 221, 255, 1));
+        animation: animate-top 1.6s linear infinite;
+    }
+    .border:nth-child(2)::before {
+        background: linear-gradient(to bottom, transparent, rgba(116, 221, 255, 1));
+        animation: animate-right 1.6s linear infinite;
+        animation-delay: 0.8s;
+    }
+    .border:nth-child(1)::after {
+        background: linear-gradient(to left, transparent, rgba(116, 221, 255, 1));
+        animation: animate-bottom 1.6s linear infinite;
+    }
+    .border:nth-child(2)::after {
+        background: linear-gradient(to top, transparent, rgba(116, 221, 255, 1));
+        animation: animate-left 1.6s linear infinite;
+        animation-delay: 0.8s;
+    }
+}
+@keyframes animate-top {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+}
+@keyframes animate-right {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(100%); }
+}
+@keyframes animate-bottom {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+@keyframes animate-left {
+    from { transform: translateY(100%); }
+    to { transform: translateY(-100%); }
+}
+.cardPartner {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    span:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to right, transparent, #FFFFFF, transparent);
+        animation: animate1 1s linear infinite paused;
+    }
+    @keyframes animate1 {
+        from { transform: translateX(-50%); }
+        to { transform: translateX(100%); }
+    }
+    span:nth-child(2) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent, #FFFFFF, transparent);
+        animation: animate2 1s linear infinite paused;
+        animation-delay: 0.5s;
+    }
+    @keyframes animate2 {
+        from { transform: translateY(-100%); }
+        to { transform: translateY(100%); }
+    }
+    span:nth-child(3) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(to left, transparent, #FFFFFF, transparent);
+        animation: animate3 1s linear infinite paused;
+    }
+    @keyframes animate3 {
+        from { transform: translateX(50%); }
+        to { transform: translateX(-100%); }
+    }
+    span:nth-child(4) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(to top, transparent, #FFFFFF, transparent);
+        animation: animate4 1s linear infinite paused;
+        animation-delay: 0.5s;
+    }
+    @keyframes animate4 {
+        from { transform: translateY(100%); }
+        to { transform: translateY(-100%); }
+    }
+    &:hover {
+        span {
+            animation-play-state: running;
+        }
+    }
+    @media (max-width: 700px) {
+        span:nth-child(2), span:nth-child(4) {
+            width: 1px;
+        }
+        span:nth-child(1), span:nth-child(3) {
+            height: 1px;
+        }
+    }
+}

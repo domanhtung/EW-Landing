@@ -1,0 +1,126 @@
+.customCharacter {
+    height: 1400px;
+    .customCharacterBox {
+        max-width: 950px;
+        text-align: center;
+        .customCharacterTitle {
+            margin-bottom: 150px;
+        }
+        .customCharacterContent {
+            width: 100vw;
+            max-width: 650px;
+            display: grid;
+            gap: 60px;
+            section {
+                width: fit-content;
+            }
+            section:nth-child(2), section:nth-child(3) {
+                margin-left: auto;
+                .characterCard {
+                    margin-left: auto;
+                }
+            }
+            .characterCard {
+                width: 300px;
+                height: 268px;
+                text-align: left;
+                &:nth-child(2) {
+                    margin: 0 20px;
+                }
+                .characterCardItem {
+                    height: 100%;
+                    padding: 20px;
+                    background: linear-gradient(114.16deg, rgba(255, 255, 255, 0.18) 2.48%, rgba(255, 255, 255, 0.18) 100%);
+                    border-radius: 2px;
+                    text-transform: capitalize;
+                    div:first-child {
+                        font-weight: 700;
+                        font-size: 24px;
+                        line-height: 35px;
+                    }
+                    ul {
+                        margin: 10px 0 0;
+                        padding-left: 15px;
+                        font-size: 18px;
+                        line-height: 35px;
+                        letter-spacing: -0.005em;
+                        font-family: 'Aldrich';
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .customCharacter {
+        height: 1000px;
+        .customCharacterBox {
+            max-width: 660px;
+            .customCharacterTitle {
+                margin-bottom: 50px;
+            }
+            .customCharacterContent {
+                gap: 40px;
+                .characterCard {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+            .customCharacterContent .characterCard .characterCardItem {
+                padding: 10px 12px;
+                div:first-child {
+                    margin-bottom: 10px;
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+                ul {
+                    padding-top: 10px;
+                    font-size: 12px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .customCharacter {
+        height: 800px;
+        .customCharacterBox {
+            max-width: 100%;
+            .customCharacterContent {
+                display: grid;
+                width: 270px;
+                margin: auto;
+                padding: 10px;
+                div[data-role="card-active-Inactive"] {
+                    padding: 3px;
+                }
+                .characterCard {
+                    width: 100%;
+                }
+            }
+            .customCharacterContent .characterCard {
+                padding: 10px 15px;
+                &:nth-child(2) {
+                    margin: 20px 0;
+                }
+            }
+            .customCharacterContent .characterCard .characterCardItem {
+                padding: 12px 22px;
+                div:first-child {
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                    line-height: 35px;
+                    letter-spacing: -0.005em;
+                }
+                ul {
+                    margin-top: 0;
+                    padding-top: 0;
+                    font-size: 14px;
+                    line-height: 24px;
+                    letter-spacing: -0.005em;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,244 @@
+.planet, .cloud {
+    position: absolute;
+    z-index: 2;
+    padding: 0;
+    // mix-blend-mode: screen;
+}
+.section {
+    position: absolute;
+    padding-top: 0;
+    padding-left: 0;
+    transition: 2s linear;
+    transition-delay: 0.5s;
+    opacity: 1;
+    img {
+        width: 100%;
+    }
+}
+.section[data-role="banner-planet"] {
+    width: 359px;
+    height: 239px;
+    top: calc(50vh + 120px);
+    left: calc(50vw - 590px);
+}
+.section[data-role="character-planet"] {
+    width: 241px;
+    height: 242px;
+    top: calc(50vh + 2200px);
+    left: calc(50vw + 390px);
+}
+.section[data-role="battle-planet"] {
+    width: 304px;
+    height: 183px;
+    top: calc(50vh + 3600px);
+    left: calc(50vw - 500px);
+}
+.section[data-role="feature-planet"] {
+    width: 262px;
+    height: 262px;
+    top: calc(50vh + 4400px);
+    left: calc(50vw - 300px);
+}
+.section[data-role="social-planet"] {
+    width: 174px;
+    height: 173px;
+    top: calc(50vh + 7400px);
+    left: calc(50vw + 450px);
+}
+.section[data-role="footer-planet"] {
+    width: 365px;
+    height: 365px;
+    bottom: -78px;
+    left: calc(50vw - 100px);
+}
+.section[data-role="banner-cloud"] {
+    width: 1302px;
+    height: 699px;
+    top: 50vh;
+    left: 0;
+    mix-blend-mode: screen;
+}
+.section[data-role="story-cloud"] {
+    width: 803px;
+    height: 431px;
+    top: calc(100vh + 700px);
+    left: 50vw;
+    mix-blend-mode: screen;
+}
+.section[data-role="character-cloud"] {
+    width: 1040px;
+    height: 499px;
+    top: calc(50vh + 2200px);
+    left: calc(50vw - 100px);
+    mix-blend-mode: screen;
+}
+.section[data-role="battle-cloud"] {
+    width: 1313px;
+    height: 630px;
+    top: calc(50vh + 3300px);
+    left: calc(50vw - 200px);
+    mix-blend-mode: screen;
+}
+.section[data-role="feature-cloud"] {
+    width: 1313px;
+    height: 630px;
+    top: calc(50vh + 4500px);
+    left: calc(50vw - 1100px);
+    mix-blend-mode: screen;
+}
+.section[data-role="market-cloud"] {
+    width: 1000px;
+    height: 480px;
+    top: calc(50vh + 5600px);
+    left: calc(50vw - 1100px);
+    mix-blend-mode: screen;
+}
+.section[data-role="roadmap-cloud"] {
+    width: 652px;
+    height: 313px;
+    top: calc(50vh + 6300px);
+    left: calc(50vw - 100px);
+    mix-blend-mode: screen;
+}
+.section[data-role="social-cloud"] {
+    width: 652px;
+    height: 313px;
+    top: calc(50vh + 7400px);
+    left: calc(50vw + 250px);
+    mix-blend-mode: screen;
+}
+.invisible {
+    padding-top: 200px !important;
+    padding-left: 100px !important;
+    opacity: 0;
+    &[data-role="banner-planet"] {
+        padding-top: 250px !important;
+        padding-left: 100px !important;
+    }
+    &[data-role="banner-planet"] {
+        padding-top: 250px !important;
+        padding-left: 150px !important;
+    }
+    &[data-role="social-planet"] {
+        padding-top: 200px !important;
+    }
+}
+@media (max-width: 1024px) {
+    .section[data-role="banner-planet"] {
+        top: calc(50vh + 120px);
+        left: calc(50vw - 400px);
+    }
+    .section[data-role="character-planet"] {
+        width: 241px;
+        height: 242px;
+        top: calc(50vh + 2000px);
+        left: calc(50vw + 200px);
+    }
+    .section[data-role="battle-planet"] {
+        width: 304px;
+        height: 183px;
+        top: calc(50vh + 3200px);
+        left: calc(50vw - 200px);
+    }
+    .section[data-role="feature-planet"] {
+        width: 200px;
+        height: 200px;
+        top: calc(50vh + 3800px);
+        left: calc(50vw - 200px);
+    }
+    .section[data-role="social-planet"] {
+        width: 174px;
+        height: 173px;
+        top: calc(50vh + 6200px);
+        left: calc(50vw + 300px);
+    }
+    .section[data-role="footer-planet"] {
+        width: 300px;
+        height: 300px;
+        bottom: -78px;
+        left: calc(50vw - 100px);
+    }
+}
+@media (max-width: 700px) {
+    .section[data-role="banner-planet"] {
+        width: 250px;
+        height: auto;
+        top: 70vh;
+        left: calc(50vw - 240px);
+    }
+    .section[data-role="banner-cloud"] {
+        width: 375px;
+        top: 100px;
+        left: -100px;
+        mix-blend-mode: screen;
+    }
+    .section[data-role="character-planet"] {
+        width: 170px;
+        top: calc(50vh + 1500px);
+        left: calc(50vw + 100px);
+    }
+    .section[data-role="battle-planet"] {
+        width: 260px;
+        top: calc(50vh + 2500px);
+        left: calc(50vw + 50px);
+    }
+    .section[data-role="feature-planet"] {
+        width: 160px;
+        top: calc(50vh + 3000px);
+        left: calc(50vw - 50px);
+    }
+    .section[data-role="social-planet"] {
+        width: 120px;
+        top: calc(50vh + 5400px);
+        left: calc(50vw - 220px);
+    }
+    .section[data-role="footer-planet"] {
+        width: 150px;
+        bottom: -200px;
+        left: calc(50vw - 100px);
+    }
+    .section[data-role="story-cloud"] {
+        width: 803px;
+        top: calc(100vh + 500px);
+        left: 0;
+        mix-blend-mode: screen;
+    }
+    .section[data-role="character-cloud"] {
+        width: 700px;
+        top: calc(50vh + 1500px);
+        left: 0;
+        mix-blend-mode: screen;
+    }
+    .section[data-role="battle-cloud"] {
+        width: 613px;
+        top: calc(50vh + 2500px);
+        left: 10px;
+        mix-blend-mode: screen;
+    }
+    .section[data-role="feature-cloud"] {
+        width: 800px;
+        height: 630px;
+        top: calc(50vh + 3200px);
+        left: -500px;
+        mix-blend-mode: screen;
+    }
+    .section[data-role="market-cloud"] {
+        width: 800px;
+        top: calc(50vh + 3800px);
+        left: calc(50vw - 600px);
+        mix-blend-mode: screen;
+    }
+    .section[data-role="roadmap-cloud"] {
+        width: 652px;
+        top: calc(50vh + 4200px);
+        left: calc(50vw - 100px);
+        mix-blend-mode: screen;
+    }
+    .section[data-role="social-cloud"] {
+        width: 652px;
+        height: 313px;
+        top: calc(50vh + 5400px);
+        left: calc(50vw - 250px);
+        mix-blend-mode: screen;
+    }
+}

@@ -1,0 +1,286 @@
+.marketplace {
+    height: 700px;
+    .marketplaceBox {
+        position: relative;
+        width: 100%;
+        max-width: 960px;
+        padding-bottom: 200px;
+        .marketplaceContent {
+            display: flex;
+            margin-top: 130px;
+            align-items: center;
+            .marketplaceContentText {
+                position: relative;
+                width: 100%;
+                max-width: 400px;
+                z-index: 1;
+                h6 {
+                    max-width: 387px;
+                    font-size: 24px;
+                    line-height: 38px;
+                    font-family: 'Aldrich';
+                }
+                .buttonMarket {
+                    margin: 20px 0px 20px 8px ;
+                }
+                .controlSlider {
+                    display: flex;
+                    .prevArrow, .nextArrow {
+                        width: 30px;
+                        height: 30px;
+                        cursor: pointer;
+                    }
+                    .prevArrow {
+                        margin-right: 15px;
+                    }
+                    .nextArrow {
+                        margin-left: 15px;
+                    }
+                    .checkBox {
+                        width: 30px;
+                        height: 30px;
+                    }
+                    .checkBoxCenter {
+                        margin: 0 15px;
+                    }
+                }
+            }
+            .marketplaceContentLeft {
+                position: absolute;
+                width: 742px;
+                left: 410px;
+                overflow: hidden;
+            }
+            .marketplaceSlider {
+                position: relative;
+                width: 100%;
+                max-width: 300px;
+                height: 430px;
+                pointer-events: none;
+                .marketplaceSliderAbsolute {
+                    position: absolute;
+                    display: flex;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    gap: 20px;
+                    transform: translateX(-660px);
+                }
+                .marketplaceContentCard {
+                    margin: auto;
+                    transition: 0.5s linear;
+                    opacity: 0.5;
+                    div {
+                        // height: 100%;
+                    }
+                    .border {
+                        height: auto;
+                    }
+                    .marketplaceContentItem {
+                        width: 131px;
+                        height: 131px;
+                    }
+                    .marketplaceContentCardItem {
+                        display: grid;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(114.16deg, rgba(249, 233, 255, 0.26) 2.48%, rgba(68, 0, 92, 0) 100%);
+                        background-size: 100% 100%;
+                        background-repeat: no-repeat;
+                        text-align: center;
+                        border-radius: 2px;
+                        justify-content: center;
+                        span {
+                            display: flex;
+                            width: 100%;
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 32px;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        &[data-role="item-1"] {
+                            background-image: url('../../public/assets/images/Home/Body/map_back.png');
+                        }
+                        &[data-role="item-2"] {
+                            background-image: url('../../public/assets/images/Home/Body/gear_back.png');
+                        }
+                        &[data-role="item-3"] {
+                            background-image: url('../../public/assets/images/Home/Body/weapon_back.png');
+                        }
+                    }
+                }
+                .marketplaceSlideOther {
+                    width: 200px;
+                    height: 290px;
+                }
+                .marketplaceSlideCurrent {
+                    width: 300px;
+                    height: 430px;
+                    opacity: 1;
+                    .marketplaceContentItem {
+                        width: 221px;
+                        height: 221px;
+                    }
+                    .marketplaceContentCardItem {
+                        background: linear-gradient(158.66deg, rgba(1, 154, 164, 0.22) 10%, rgba(38, 124, 130, 0) 96.33%);
+                        background-size: 100% 100%;
+                        background-repeat: no-repeat;
+                        span {
+                            font-size: 36px;
+                            line-height: 73px;
+                        }
+                        img {
+                            transition: 0.5s linear;
+                        }
+                        &[data-role="item-1"] {
+                            opacity: 0.9;
+                        }
+                    }
+                }
+                .slickTrack {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .marketplace {
+        .marketplaceBox {
+            max-width: 660px;
+            padding-bottom: 50px;
+            .marketplaceContent {
+                .marketplaceContentText {
+                    position: relative;
+                    width: 100%;
+                    max-width: 300px;
+                    z-index: 1;
+                    h6 {
+                        font-size: 18px;
+                        line-height: 28px;
+                    }
+                    .controlSlider {
+                        display: flex;
+                        .prevArrow, .nextArrow {
+                            width: 30px;
+                            height: 30px;
+                        }
+                        .checkBox {
+                            width: 30px;
+                            height: 30px;
+                        }
+                        .checkBoxCenter {
+                            margin: 0 15px;
+                        }
+                    }
+                }
+                .marketplaceContentLeft {
+                    width: 742px;
+                    left: 290px;
+                }
+                .marketplaceSlider {
+                    position: relative;
+                    width: 100%;
+                    max-width: 300px;
+                    height: 430px;
+                    pointer-events: none;
+                    .marketplaceSliderAbsolute {
+                        position: absolute;
+                        display: flex;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        gap: 20px;
+                        transform: translateX(-660px);
+                    }
+                    .marketplaceContentCard {
+                        padding: 0 20px;
+                        .marketplaceContentItem {
+                            width: 131px;
+                            height: 131px;
+                        }
+                        .marketplaceContentCardItem {
+                            span {
+                                font-size: 18px;
+                                line-height: 32px;
+                            }
+                        }
+                    }
+                    .marketplaceSlideOther {
+                        height: 240px;
+                    }
+                    .marketplaceSlideCurrent {
+                        height: 380px;
+                        opacity: 1;
+                        .marketplaceContentItem {
+                            width: 221px;
+                            height: 221px;
+                        }
+                        .marketplaceContentCardItem {
+                            span {
+                                font-size: 30px;
+                                line-height: 53px;
+                            }
+                        }
+                    }
+                    .slickTrack {
+                        pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .marketplace {
+        height: 800px;
+        .marketplaceBox {
+            padding-bottom: 0;
+            .marketplaceContent {
+                display: block;
+                margin-top: 35px;
+                padding: 0 10px;
+                .marketplaceContentText {
+                    max-width: 100%;
+                    margin: 0;
+                    text-align: center;
+                    .buttonMarket {
+                        margin: 20px 0 0;
+                    }
+                    h6 {
+                        width: 280px;
+                        margin: auto;
+                        font-size: 14px;
+                        line-height: 25px;
+                    }
+                    .controlSlider {
+                        margin-top: 0;
+                        justify-content: center;
+                    }
+                }
+                .marketplaceContentLeft {
+                    position: relative;
+                    width: 300px;
+                    left: 0;
+                    margin: auto;
+                    overflow: revert;
+                }
+                .marketplaceSlider {
+                    .marketplaceContentCard {
+                        height: 340px;
+                        padding: 0 35px;
+                    }
+                }
+                .marketplaceSlideCurrent {
+                    .marketplaceContentCardItem {
+                        span {
+                            font-size: 30px !important;
+                            line-height: 33px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

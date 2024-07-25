@@ -1,0 +1,116 @@
+.lightStick {
+    position: absolute;
+    width: 9px;
+    height: 138px;
+    left: -4px;
+    background: linear-gradient(93.36deg, #56CCF2 -19.95%, #97DAEF 110.13%);
+    border-radius: 12px;
+    .lightStickIn {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        div {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left: -14px;
+            border-radius: 50%;
+            &::after, &::before {
+                content: '';
+                position: absolute;
+                width: 7px;
+                height: 7px;
+                background: linear-gradient(93.36deg, #56CCF2 -19.95%, #97DAEF 110.13%);
+                border-radius: 12px;
+            }
+            &::before {
+                filter: blur(2px);
+                z-index: 1;
+            }
+            &::after {
+                opacity: 0.5;
+                border: 1px solid #F2F2F2;
+                filter: blur(3px);
+                z-index: 2;
+            }
+        }
+        div[data-role="firefly-0"] {
+            width: 30px;
+            height: 30px;
+            top: calc(13% * 0);
+            left: -14px;
+            animation: animate 1.5s linear infinite;
+        }
+        div[data-role="firefly-1"] {
+            width: 30px;
+            height: 30px;
+            top: calc(13% * 1);
+            left: -16px;
+            animation: animate-reverse 1.5s linear infinite;
+        }
+        div[data-role="firefly-2"] {
+            width: 30px;
+            height: 40px;
+            top: calc(13% * 2);
+            left: -10px;
+            animation: animate 2s linear infinite;
+        }
+        div[data-role="firefly-3"] {
+            width: 20px;
+            height: 50px;
+            top: calc(13% * 3);
+            left: -5px;
+            animation: animate-reverse 2s linear infinite;
+        }
+        div[data-role="firefly-4"] {
+            width: 15px;
+            left: 15px;
+            top: calc(13% * 4);
+            left: -7px;
+            animation: animate 1s linear infinite;
+        }
+        div[data-role="firefly-5"] {
+            width: 24px;
+            height: 24px;
+            top: calc(13% * 5);
+            left: -10px;
+            animation: animate 2s linear infinite;
+        }
+        div[data-role="firefly-6"] {
+            width: 35px;
+            height: 8px;
+            top: calc(13% * 6);
+            left: -6px;
+            animation: animate-reverse 1.5s linear infinite;
+        }
+    }
+}
+@keyframes animate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+@keyframes animate-reverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+.lightStickTop {
+    animation: stick-animate-top 6s linear infinite;
+}
+.lightStickBottom {
+    animation: stick-animate-bottom 6s linear infinite;
+}
+@keyframes stick-animate-top {
+    0% { top: 10%; }
+    50% { top: 70% }
+    100% { top: 10%; }
+}
+@keyframes stick-animate-bottom {
+    0% { bottom: 10%; }
+    50% { bottom: 70% }
+    100% { bottom: 10%; }
+}
+@media (max-width: 700px) {
+    .lightStick {
+        display: none;
+    }
+}
